@@ -45,6 +45,11 @@ public class BlogUser {
         this.birthDate = birthDate;
     }
 
+    public BlogUser(BlogUserDTO blogUserDTO) {
+        this(blogUserDTO.firstName(), blogUserDTO.lastName(), blogUserDTO.email(), blogUserDTO.userName(),
+                blogUserDTO.passwordHash(), blogUserDTO.birthDate());
+    }
+
     public BlogUser() {
         super();
     }
